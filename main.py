@@ -1,7 +1,6 @@
 
-import sys, os
-print("PYTHON PATH:", sys.executable, sys.path)
-print("Installed packages:", os.popen('pip freeze').read())
+import sys
+print("Python path:", sys.executable)
 import requests
 import datetime
 from bs4 import BeautifulSoup
