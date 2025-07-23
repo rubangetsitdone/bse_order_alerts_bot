@@ -1,4 +1,4 @@
-
+python3 -m pip install requests
 import sys
 print("Python path:", sys.executable)
 import requests
