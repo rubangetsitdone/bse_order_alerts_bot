@@ -3,7 +3,7 @@ services:
     name: bse-order-alerts
     runtime: python
     buildCommand: pip install -r requirements.txt
-    startCommand: /opt/render/project/venv/bin/python main.py
+    startCommand: /opt/render/project/venv/bin/python3 main.py
     schedule: "0 11 * * *"
     envVars:
       - key: TELEGRAM_BOT_TOKEN
