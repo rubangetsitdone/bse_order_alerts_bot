@@ -5,5 +5,5 @@ services:
     buildCommand: |
       pip install requests
       pip install -r requirements.txt
-    startCommand: python3 main.py
+    startCommand: python main.py
     schedule: "0 11 * * *"
