@@ -1,9 +1,14 @@
 
 import requests
+import sys, os
+print("PYTHON PATH:", sys.executable, sys.path)
+print("Installed packages:", os.popen('pip freeze').read())
+
 import datetime
 from bs4 import BeautifulSoup
 import telegram
 from apscheduler.schedulers.blocking import BlockingScheduler
+
 
 # Telegram bot setup
 TELEGRAM_BOT_TOKEN = 'your_telegram_bot_token'
