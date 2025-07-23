@@ -1,13 +1,12 @@
 services:
   - type: cron
-    name: bse-order-alerts
-    env: python
-    buildCommand: |
-      python3 -m venv venv
-      . venv/bin/activate
-      pip install --upgrade pip
-      pip install -r requirements.txt
-    startCommand: |
-      . venv/bin/activate
-      python3 main.py
-    schedule: "0 11 * * *"
+    name: bse-order-alerts-bot
+    runtime: python
+    buildCommand: pip install -r requirements.txt
+    startCommand: python main.py
+    schedule: "0 4 * * *"     # Adjust time as needed
+    envVars:
+      - key: TELEGRAM_BOT_TOKEN
+        sync: false
+      - key: TELEGRAM_USER_ID
+        sync: false
