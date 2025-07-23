@@ -3,7 +3,11 @@ services:
     name: bse-order-alerts
     env: python
     buildCommand: |
-      python3 -m pip install --upgrade pip
-      python3 -m pip install -r requirements.txt
-    startCommand: python3 main.py
+      python3 -m venv venv
+      . venv/bin/activate
+      pip install --upgrade pip
+      pip install -r requirements.txt
+    startCommand: |
+      . venv/bin/activate
+      python main.py
     schedule: "0 11 * * *"
