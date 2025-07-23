@@ -2,8 +2,6 @@ services:
   - type: cron
     name: bse-order-alerts
     env: python
-    buildCommand: |
-      pip install requests
-      pip install -r requirements.txt
-    startCommand: python main.py
+    buildCommand: pip install -r requirements.txt
+    startCommand: /opt/render/project/venv/bin/python main.py
     schedule: "0 11 * * *"
