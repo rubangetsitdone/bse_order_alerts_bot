@@ -1,9 +1,8 @@
 
-import requests
 import sys, os
 print("PYTHON PATH:", sys.executable, sys.path)
 print("Installed packages:", os.popen('pip freeze').read())
-
+import requests
 import datetime
 from bs4 import BeautifulSoup
 import telegram
