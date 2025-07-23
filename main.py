@@ -1,10 +1,4 @@
-try:
-    import requests
-except ImportError:
-    import subprocess
-    import sys
-    subprocess.check_call([sys.executable, "-m", "pip", "install", "requests"])
-    import requests
+import requests
 import datetime
 from bs4 import BeautifulSoup
 import telegram
