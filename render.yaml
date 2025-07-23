@@ -9,5 +9,5 @@ services:
       pip install -r requirements.txt
     startCommand: |
       . venv/bin/activate
-      python main.py
+      python3 main.py
     schedule: "0 11 * * *"
